@@ -10,6 +10,9 @@
     "test": "jest",
     "startprod": "node server.js --env production"
   },
+  "engines": {
+  "node": "^11.10.0"
+},
   "repository": {
     "type": "git",
     "url": "git@github.com:shwetarane/Project.git"
