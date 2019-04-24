@@ -4,16 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "NODE_ENV=development PORT=3000 nodemon server.js",
+    "start": "NODE_ENV=development PORT=8000 nodemon server.js",
     "migrate": "knex migrate:latest --env development",
     "seed": "knex seed:run --env development",
     "test": "jest",
     "startprod": "node server.js --env production"
   },
-
   "repository": {
     "type": "git",
-    "url": "git@github.com:elizabeth-phillips/ReadySetRun.git"
+    "url": "git@github.com:shwetarane/Project.git"
   },
   "author": "",
   "license": "ISC",
