@@ -1,0 +1,33 @@
+<div class="container">
+    <div class = "row">
+    <div class="input-group col-md-8">
+        <form action="../admin/Users" method="post">
+            <input name="query" class="form-control" type="text" placeholder="Search" aria-label="Search" value={{@query}} >
+            <button class="btn btn-primary">Search</button>
+        </form>
+    </div>
+    </div>
+    <br><br>
+    <div class="row">
+        {{#each data }}
+            <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
+                <div class="card-header">
+                    <b>{{id}}: {{first_name}} {{last_name}}</b>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Phone:</b><td>{{phone}}</td><br>
+                        <b>Email:</b><td>{{email}}</td><br>
+                        <b>Address:</b><td>{{city}}, {{state}} {{zipcode}}</td><br>
+                        <b>Age:</b><td>{{age}}</td><br>
+                        <b>Desired Pace:</b><td>{{desired_pace}}</td><br>
+                        {{#if admin}}
+                            <td>Admin</td>
+                        {{/if}}
+                    </p>
+                    <a href="../user/{{id}}" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

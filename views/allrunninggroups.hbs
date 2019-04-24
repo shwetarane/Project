@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+        <form action="../running_group/" method="post">
+            <input name="query" type="text" class="form-control" style="width: 20rem;" placeholder="Keywords" value={{@query}} >
+            </div>
+            <div class="col-md-4"><select name="selectpicker" class="custom-select my-1 mr-sm-2">
+                <option value="All">All States</option>
+                {{#each states}}
+                    <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select></div>
+            <div class="col-md-3"><button type="submit" class="btn btn-primary searchGroup">Search</button></div>
+        </form>
+    </div>
+    <br><br>
+    <h2>
+    {{#if query}}
+        Search Results for: {{query}}
+    {{else}}
+        <h2>All running groups
+    {{/if}}
+    {{#if state}}
+        in {{state}}
+    {{/if}}
+    </h2>
+    <div class="row">
+    {{#each data }}
+        <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
+            <div class="card-header">
+                <b>{{id}}. {{name}}</b>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    <b>Average Pace:</b> <br>{{pace}}<br>
+                    <b>Location:</b> <br>{{city}}, {{state}} {{zipcode}}<br>
+                    <b>Phone:</b> <br>{{phone}}<br>
+                </p>
+                 <a href="../running_group/{{id}}" class="btn btn-primary">View Details</a>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</div>

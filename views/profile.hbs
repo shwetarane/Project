@@ -1,0 +1,105 @@
+
+<div class="container">
+    <h1>{{@first_name}} {{@last_name}} Profile</h1>
+    <hr>
+    
+    <div class="row">
+        <section class="col-md-6">
+            <h2> User Info</h2>
+            <table style="width:80%">
+                <tr>
+                    <td>Name  </td>
+                    <td>: {{@first_name}} {{@last_name}}</td>
+                </tr>
+                <tr>
+                    <td>Email </td>
+                    <td>: {{@email}}</td>
+                </tr>
+                <tr>
+                    <td>Phone </td>
+                    <td>: {{@phone}}</td>
+                </tr>
+                <tr>
+                    <td>Address </td>
+                    <td>: {{@city}} {{@state}} {{@zipcode}}</td>
+                </tr>
+                <tr>
+                    <td>Desired Pace </td>
+                    <td>: {{@desired_pace}}</td>
+                </tr>
+            </table>
+            <br>
+            <button onClick= "updateUser()" type="submit" class="btn btn-primary updateInfo">Update</button><p>Double Click please- working on it</p>
+        </section>
+
+        <section class="col-md-6">
+        <form action="/user/{{@id}}" method="post" id="user_update" class="col-md-8">
+            
+            <div class="text-input-container">
+                <p><b>Update your information: </b></p>
+                <input name= "first_name" type="text" class="form-control" placeholder="First name" value={{@first_name}}>
+                <input name= "last_name" type="text" class="form-control" placeholder="Last Name"  value={{@last_name}}>
+                <input name= "email" type="text" class="form-control" placeholder="Email"  value={{@email}}>
+                <input name= "password" type="password" class="form-control" placeholder="Password"  value={{@password}}>
+                <input name= "phone" type="text" class="form-control" placeholder="Phone Number"  value={{@phone}}>
+                <input name= "city" type="text" class="form-control" placeholder="City"  value={{@city}}>
+                <input name= "state" type="text" class="form-control" placeholder="State"  value={{@state}}>
+                <input name= "zipcode" type="text" class="form-control" placeholder="Zipcode"  value={{@zipcode}}>
+                <input name= "age" type="text" class="form-control" placeholder="Age"  value={{@age}}>
+                <input name= "desired_pace" type="text" class="form-control" placeholder="Desired Pace"  value={{@desired_pace}}>
+            </div><br>
+            <button  type="submit" class="btn btn-primary done">Done</button>
+        </form>
+        </section>
+    </div>
+    <br>
+    <hr>
+    <h2 class="row mx-10">Your Running Groups</h2>
+    {{#if running_groups}}
+    <div class="row">
+        {{#each running_groups }}
+            <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
+                <div class="card-header">
+                    <b>{{name}}</b>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{city}}, {{state}} {{zipcode}}</h5>
+                    <p class="card-text">
+                        <b>Pace:</b> {{pace}}<br>
+                        <b>Phone:</b> {{phone}}<br>
+                    </p>
+                    <a href="../../running_group/{{id}}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    {{else}}
+    <h4>Currently you are not a part of any running groups!</h4>
+    <h5>Let's change that by looking at all of the options <a href="../../running_group">here</a>!</h5>
+    {{/if}}
+    <hr>
+    <h2 class="row mx-10">Your Previous Races</h2>
+    {{#if races}}
+    <div class="row">
+        {{#each races }}
+            <div class="card col-lg-4 col-sm-6 col-xs-12" style="width: 18rem;">
+                <div class="card-header">
+                    <b>{{name}}</b>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        <b>Date:</b> {{{format_date date}}}<br>
+                        <b>Pace:</b> {{pace}}<br>
+                        <b>Ranking:</b> {{ranking}}<br>
+                        <b>Location:</b> {{city}}, {{state}} {{zipcode}}
+                    </p>
+                    <a href="../../race/{{id}}" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{else}}
+    <h4>Currently, you have not participated in a race or have any future races!</h4>
+    <h5>Let's change that by looking at all of the options <a href="../../race">here</a>!</h5>
+    {{/if}}
+</div>
