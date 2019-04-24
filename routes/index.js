@@ -44,7 +44,7 @@ router.get("/admin/Users", (req, res) => {
    User.fetchAll()
   .then( async Users => {
       user = await getUserLoggedIn();
-      res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify(Users)), user:user});
+      res.status(200).render('admin/viewusers', { data: JSON.parse(JSON.stringify(Users)), user:user});
   })
   .catch(err => {
       console.log(err);
@@ -57,7 +57,7 @@ router.post("/admin/Users", (req, res) => {
  .then( async Users => {
      user = await getUserLoggedIn();
      result = JSON.parse(JSON.stringify( Users))
-     res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify(Users)), 
+     res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify(Users)),
       data: getFilteredUsers(result, req.body.query), user:user});
  })
  .catch(err => {
