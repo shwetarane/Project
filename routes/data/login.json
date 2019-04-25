@@ -1,1 +1,35 @@
-{}
+{
+    "id": 59,
+    "first_name": "Jon ",
+    "last_name": "Snow",
+    "email": "jon@winterfell.com",
+    "password": "danny",
+    "age": 25,
+    "desired_pace": "4.5",
+    "city": "Winterfell",
+    "state": "Westeros",
+    "zipcode": 512512,
+    "phone": "5125125122",
+    "admin": 0,
+    "races": [],
+    "running_groups": [
+        {
+            "id": 3,
+            "name": "Quizmo",
+            "pace": "8:34",
+            "city": "Olney",
+            "state": "West Virginia",
+            "zipcode": 54158,
+            "phone": "(992) 422-3725"
+        },
+        {
+            "id": 5,
+            "name": "Solaren",
+            "pace": "12:6",
+            "city": "Richford",
+            "state": "New Hampshire",
+            "zipcode": 78330,
+            "phone": "(859) 566-2642"
+        }
+    ]
+}

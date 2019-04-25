@@ -8,7 +8,7 @@ function clearUserLoggedIn(){
 
 function getUserLoggedIn(){
     loginFile = './routes/data/login.json'
-    user = JSON.parse(fs.readFileSync(loginFile))
+    user = JSON.parse(fs.readFileSync(loginFile), 10000)
     return user;
 }
 
@@ -37,15 +37,15 @@ function UserInfo(id, login){
             WHERE ? = rgm.user_id AND rg.id = rgm.running_group_id`, user.id)
         .then(rgs => {
             user['running_groups'] = rgs
-            fs.writeFileSync(userFile, JSON.stringify(user, null, 4)); 
+            fs.writeFileSync(userFile, JSON.stringify(user, null, 4));
             if (login){
                 loginFile = './routes/data/login.json';
-                fs.writeFileSync(loginFile, JSON.stringify(user, null, 4)); 
+                fs.writeFileSync(loginFile, JSON.stringify(user, null, 4));
             }
             })
         })
     })
-} 
+}
 
 module.exports = {
     UserInfo: UserInfo,

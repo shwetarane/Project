@@ -3,6 +3,7 @@ body{
     background: #00467F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Raleway', sans-serif;
 }
 
 .container-body-races {
@@ -24,7 +25,6 @@ body{
   padding-top: 2%;
   margin-left: 10px;
   padding-left: 20px;
-  /* scroll: 0; */
 }
 
 .navbar-custom {
@@ -54,10 +54,18 @@ body{
 }
 
 .card-body{
-    height: 20rem;
+    height: 22rem;
 }
-card-body-run-grp{
-  height: 10rem;
+
+.card-body-run-grp{
+  height: 13rem;
+}
+
+.card-profile{
+  height: 18rem;
+}
+.p-3 {
+    padding: 0.5rem!important;
 }
 
 .scroll {
@@ -67,10 +75,11 @@ card-body-run-grp{
     /* height: auto; */
 }
 .center-image {
-    /* display: block; */
-    margin-top: 15px;
-    /* margin-left: auto;
-    margin-right: auto; */
+    display: block;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:5%;
     width: 30%;
     height: 30%;
   }
@@ -107,9 +116,7 @@ card-body-run-grp{
 
 /* MODAL  */
 
-body {
-    font-family: 'Raleway', sans-serif;
-}
+
 
 .tab-style {
     font-size: 20px;
