@@ -43,7 +43,7 @@ login = (req, res) => {
             var fullUrl = req.protocol + '://' + req.get('host') + '/user/' + User.id;
             res.redirect(fullUrl);
         }
-    })
+    }, 15000)
     .catch(err => {
         console.log(err);
         res.status(500).json(err);

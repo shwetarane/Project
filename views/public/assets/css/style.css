@@ -3,7 +3,7 @@ body{
     background: #00467F;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}    
+}
 
 .navbar-custom {
     padding-top: 1rem;
@@ -231,7 +231,7 @@ body {
 /* ---------active----- */
 
 .modal-body {
-    /*background-image: url('https://media.gettyimages.com/photos/athlete-running-picture-id636887598');*/
+    /*background-image: url('http://media.gettyimages.com/photos/athlete-running-picture-id636887598');*/
     background-size: cover;
     /* opacity: 0.7; */
     /* filter: alpha(opacity=40); */
@@ -363,11 +363,11 @@ body {
 .form-control{
     margin-bottom:10px;
 }
-  
+
   .raceInput{
     padding-right: 10px;
     margin-right: 10px;
-  
+
   }
   .dropDownRace{
     padding-right: 10px;
@@ -379,7 +379,7 @@ body {
     margin-right: 10px;
   }
 
-  
+
   .footnote{
     text-align: center;
   }
@@ -390,7 +390,7 @@ body {
 /* @media screen and (max-width: 767px) and (min-width: 576px) {
     body{
         background: 100%;
-    } 
+    }
     #myModal {
         margin-left: 20%;
         margin-right: 20%;
