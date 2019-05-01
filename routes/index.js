@@ -44,7 +44,7 @@ router.get("/admin/Users", (req, res) => {
    User.fetchAll()
   .then( async Users => {
       user = await getUserLoggedIn();
-      res.status(200).render('admin/viewUsers', { data: JSON.parse(JSON.stringify(Users)), user:user});
+      res.status(200).render('admin/viewusers', { data: JSON.parse(JSON.stringify(Users)), user:user});
   })
   .catch(err => {
       console.log(err);
