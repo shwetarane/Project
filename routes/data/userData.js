@@ -8,7 +8,7 @@ function clearUserLoggedIn(){
 
 function getUserLoggedIn(){
     loginFile = './routes/data/login.json'
-    user = JSON.parse(fs.readFileSync(loginFile))
+    user = JSON.parse(fs.readFileSync(loginFile), 10000)
     return user;
 }
 
@@ -45,16 +45,16 @@ function UserInfo(id, login){
                             WHERE f.user_id = ?`, id)
                 .then(ft_race => {
                     user['future_races'] = ft_race
-                fs.writeFileSync(userFile, JSON.stringify(user, null, 4)); 
+                fs.writeFileSync(userFile, JSON.stringify(user, null, 4));
                 if (login){
                     loginFile = './routes/data/login.json';
-                    fs.writeFileSync(loginFile, JSON.stringify(user, null, 4)); 
+                    fs.writeFileSync(loginFile, JSON.stringify(user, null, 4));
                 }
             })
         })
     })
 })
-} 
+}
 
 module.exports = {
     UserInfo: UserInfo,
