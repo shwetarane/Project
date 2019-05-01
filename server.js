@@ -11,7 +11,7 @@ const exphbs = require("express-handlebars");
 
 
 const app = express();
-const PORT = process.env.PORT || 8000 ;
+const PORT = 3000;//process.env.PORT || 3000;
 
 app.engine('hbs', exphbs({
   defaultLayout: '../main',
@@ -25,7 +25,6 @@ app.set('view engine', 'hbs');
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(express.static(process.cwd() + "/views/public"));
 
 app.use("/", index);
