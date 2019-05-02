@@ -1,6 +1,10 @@
 /* main.hbs */
 body {
-    background: #FFFFFF;
+    background-image: url("https://i0.wp.com/bestlifeonline.com/wp-content/uploads/2017/05/cool_blue-1920x1200.jpg?resize=1024%2C640&ssl=1");
+    /* background-color: #cccccc; */
+    background-repeat: no-repeat repeat;
+    background-size: cover;
+    
     font-family: 'Raleway', sans-serif;
 }
 
@@ -69,16 +73,16 @@ body {
     height: 18rem;
 }
 
+.card-recommendations {
+    height: 20rem;
+}
+
 .p-3 {
     padding: 0.5rem !important;
 }
 
 .scrollbar {
     overflow-y: auto;
-}
-
-.card-title {
-    /* height: auto; */
 }
 
 .center-image {
@@ -89,6 +93,10 @@ body {
     margin-bottom: 5%;
     width: 30%;
     height: 30%;
+}
+
+.updateI {
+    margin-bottom: 0.5rem;
 }
 
 /* .card-img-top {
@@ -467,6 +475,7 @@ body {
     width: 12px;
     background-color: #F5F5F5;
 }
+
 /* 
 .scrollbar-default::-webkit-scrollbar-thumb {
     border-radius: 10px;
