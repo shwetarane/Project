@@ -1,11 +1,11 @@
 /* main.hbs */
 body {
 
-    background: url('https://i0.wp.com/bestlifeonline.com/wp-content/uploads/2017/05/cool_blue-1920x1200.jpg?resize=1024%2C640&ssl=1') no-repeat center center fixed;
+    /* background: url('https://i0.wp.com/bestlifeonline.com/wp-content/uploads/2017/05/cool_blue-1920x1200.jpg?resize=1024%2C640&ssl=1') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; */
     font-family: 'Raleway', sans-serif;
 }
 
