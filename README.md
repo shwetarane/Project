@@ -26,3 +26,6 @@ Make sure to have jest and puppeteer installed:
 
 * `npm jest` runs all jest files 
 * node testing/puppeteer/`filename.js` to run puppeteer 
+
+
+### Repo to host on heroku 
